@@ -41,3 +41,12 @@ app-example
 # generated native folders
 /ios
 /android
+
+
+# Copy everything from your .gitignore file here
+
+/android
+/ios
+
+# Include a file not in source control
+!temp_file.json
