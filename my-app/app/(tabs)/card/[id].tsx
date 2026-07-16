@@ -1,9 +1,9 @@
 import { PokemonDetailInfo } from "@/app/api/apitype";
 import { useQueryClient } from "@tanstack/react-query";
-import { Stack, useLocalSearchParams } from "expo-router";
-import React, { useEffect } from "react";
-import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { Audio } from "expo-av";
+import { Stack, useLocalSearchParams } from "expo-router";
+import { useEffect } from "react";
+import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function DetailCard() {
