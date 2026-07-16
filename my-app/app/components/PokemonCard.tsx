@@ -1,9 +1,9 @@
+import { useQuery } from "@tanstack/react-query";
+import { useRouter } from "expo-router";
 import React from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
-import { PokemonDetailInfo } from "../api/apitype";
-import { useQuery } from "@tanstack/react-query";
 import { getColorOfThePokemon } from "../api/api";
-import { useRouter } from "expo-router";
+import { PokemonDetailInfo } from "../api/apitype";
 
 const POKEMON_PASTEL_COLORS: Record<string, string> = {
   red: "#FEE2E2",
@@ -42,7 +42,7 @@ export default function PokemonCard({ datas, offset }: PokemonCardProps) {
     <TouchableOpacity
       onPress={() =>
         router.push({
-          pathname: "/(tabs)/card/[id]",
+          pathname: "/(tabs)/home/card/[id]",
           params: {
             id: datas.id.toString(),
             title: datas.name,

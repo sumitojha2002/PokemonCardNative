@@ -1,22 +1,12 @@
-import { useQuery } from "@tanstack/react-query";
-import { Stack } from "expo-router";
+import { Tabs } from "expo-router";
 import React from "react";
 
-export default function TabLaout() {
+export default function tabLayout() {
   return (
-    <Stack
-      screenOptions={{
-        fullScreenGestureEnabled: true,
-      }}
-    >
-      <Stack.Screen
-        name="index"
-        options={{
-          title: "Home",
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen name="card/[id]" />
-    </Stack>
+      <Tabs screenOptions={{ headerShown: false,  }}>
+      <Tabs.Screen name="/home" />
+      <Tabs.Screen name="/about" />
+      <Tabs.Screen name="/support" />
+    </Tabs>
   );
 }

@@ -18,6 +18,9 @@ export interface PokemonDetailInfo {
         "official-artwork": {
           front_default: string;
         };
+        "showdown": {
+          front_default: string;
+        }
       };
     };
     cries: {

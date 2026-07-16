@@ -30,22 +30,19 @@ export default function DetailCard() {
     await sound.playAsync();
   };
   const stackTitle = title.charAt(0).toUpperCase() + title.slice(1);
-  // ... your existing logic stays exactly the same ...
-  useEffect(() => {
-    console.log(pokemon?.sprites.other["official-artwork"].front_default);
-  }, []);
+
   return (
     <SafeAreaView className="flex-1 bg-gray-50">
       <Stack.Screen options={{ title: stackTitle }} />
-      <ScrollView className="flex-1 border">
+      <ScrollView className="flex-1">
         <View className="items-center pb-10">
           <View className="w-[270px] h-[400px] rounded-lg justify-center items-center">
             <Image
-              className="border"
               source={{
-                uri: pokemon?.sprites.other["official-artwork"].front_default,
+                uri: pokemon?.sprites.other.showdown.front_default,
               }}
-              style={{ width: 200, height: 200 }}
+              className="w-full h-full"
+              resizeMode="contain"
             />
             <TouchableOpacity
               onPress={playCry}

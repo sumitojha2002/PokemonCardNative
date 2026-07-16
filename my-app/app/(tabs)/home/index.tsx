@@ -1,17 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
+  Animated,
   Image,
   ScrollView,
   Text,
   TouchableOpacity,
   View,
-  Animated,
 } from "react-native";
 
-import { SafeAreaView } from "react-native-safe-area-context";
-import PokemonCard from "../components/PokemonCard";
+import { getAllPokemonsDefault } from "@/app/api/api";
+import PokemonCard from "@/app/components/PokemonCard";
 import { useQuery } from "@tanstack/react-query";
-import { getAllPokemonsDefault } from "../api/api";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function index() {
   const [offset, setOffset] = useState(0);
@@ -55,7 +55,7 @@ export default function index() {
     return (
       <View className="flex-1 justify-center items-center w-[100%] h-[80px]">
         <Image
-          source={require("../../assets/images/whyareyourunning.gif")}
+          source={require("../../../assets/images/whyareyourunning.gif")}
           className="w-[130px]"
           resizeMode="contain"
         />
@@ -69,7 +69,7 @@ export default function index() {
     );
 
   return (
-    <SafeAreaView className="flex-1 bg-gray-50">
+    <SafeAreaView className="flex-1" edges={["top", "left", "right"]}>
       <ScrollView
         ref={scrollRef}
         className="flex-1"
@@ -77,7 +77,7 @@ export default function index() {
       >
         <View className="items-center h-[80px] w-[80%] mb-4">
           <Image
-            source={require("../../assets/images/pokemon.png")}
+            source={require("../../../assets/images/pokemon.png")}
             className="w-full h-full"
             resizeMode="contain"
           />
